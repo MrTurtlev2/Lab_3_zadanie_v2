@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Form-Index";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Implicit Razor expression - Current date: @DateTime.Now !</p>
+
+<p>Explicit Razor expression - Last week this time: @(DateTime.Now - TimeSpan.FromDays(7))</p>
+
+@{
+    void RenderName(string name)
+    {
+        <p>Name: <strong>@name</strong></p>
+    }
+
+    RenderName("Mahatma Gandhi");
+    RenderName("Martin Luther King, Jr.");
+}

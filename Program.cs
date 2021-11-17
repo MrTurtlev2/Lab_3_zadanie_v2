@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lab_3_zadanie_v2
+namespace lab3_test
 {
     public class Program
     {

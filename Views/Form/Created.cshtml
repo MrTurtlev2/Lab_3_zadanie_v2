@@ -1,0 +1,13 @@
+﻿@model lab3_test.Models.FormModel
+@{
+    ViewData["Title"] = "Display Names";
+}
+
+<div class="text-left">
+    <h1 class="display-4">Repeat Names</h1>
+     @for (int x = 0; x < Model.RepeatValue; x++)
+      {
+        <p>@Html.DisplayFor(model => model.Name)</p> 
+      }
+</div>
+

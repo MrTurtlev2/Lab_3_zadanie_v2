@@ -1,4 +1,4 @@
-﻿using Lab_3_zadanie_v2.Models;
+﻿using lab3_test.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lab_3_zadanie_v2.Controllers
+namespace lab3_test.Controllers
 {
     public class HomeController : Controller
     {
@@ -18,7 +18,24 @@ namespace Lab_3_zadanie_v2.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int id)
+        {
+            ViewData["p1"] = id;
+            return View();
+        }
+
+        public IActionResult Test2(int id, int? param2, int param3 = 30, int param4 = 40)
+        {
+            ViewData["id"] = id;
+            ViewData["p2"] = param2;
+            ViewData["p3"] = param3;
+            ViewData["p4"] = param4;
+            return View();
+        }
+
+        [Route("Home/Tescik3")]
+
+        public IActionResult Test3()
         {
             return View();
         }

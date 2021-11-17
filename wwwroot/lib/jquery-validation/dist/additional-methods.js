@@ -943,12 +943,12 @@ $.validator.addMethod( "postcodeUK", function( value, element ) {
  * The end result is that neither of these inputs:
  *
  *	<input class="productinfo" name="partnumber">
- *	<input class="productinfo" name="description">
+ *	<input class="productinfo" name="RepeatValue">
  *
  *	...will validate unless at least one of them is filled.
  *
  * partnumber:	{require_from_group: [1,".productinfo"]},
- * description: {require_from_group: [1,".productinfo"]}
+ * RepeatValue: {require_from_group: [1,".productinfo"]}
  *
  * options[0]: number of fields that must be filled in the group
  * options[1]: CSS selector that defines the group of conditionally required fields
@@ -982,14 +982,14 @@ $.validator.addMethod( "require_from_group", function( value, element, options )
  * The end result, is that none of these inputs:
  *
  *	<input class="productinfo" name="partnumber">
- *	<input class="productinfo" name="description">
+ *	<input class="productinfo" name="RepeatValue">
  *	<input class="productinfo" name="color">
  *
  *	...will validate unless either at least two of them are filled,
  *	OR none of them are.
  *
  * partnumber:	{skip_or_fill_minimum: [2,".productinfo"]},
- * description: {skip_or_fill_minimum: [2,".productinfo"]},
+ * RepeatValue: {skip_or_fill_minimum: [2,".productinfo"]},
  * color:		{skip_or_fill_minimum: [2,".productinfo"]}
  *
  * options[0]: number of fields that must be filled in the group
